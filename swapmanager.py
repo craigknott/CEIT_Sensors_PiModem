@@ -129,7 +129,7 @@ class SwapManager(SwapInterface):
     	        #self.restart();	
 	except:
 	    e = sys.exc_info()[0]
-	    print ("<p>Error: %s</p>" % e )
+	    print ("<publishData> Error: %s" % e )
 
     def registerValueChanged(self, register):
         """
@@ -247,7 +247,7 @@ class SwapManager(SwapInterface):
 	    self.mqttc.loop_forever()
         except:
 	    e = sys.exc_info()[0]
-	    print ("<p>Error: %s</p>" % e )
+	    print ("<__init__> Error: %s" % e )
             self.restart() 
 
 
@@ -265,5 +265,5 @@ if __name__ == '__main__':
         sm = SwapManager(settings)
     except:
 	e = sys.exc_info()[0]
-	print ("<p>Error: %s</p>" % e )
+	print ("<__main__> Error: %s" % e )
 	sys.exit(1)

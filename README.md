@@ -1,7 +1,7 @@
-CEIT_Temperature
+CEIT_Sensors_PiModem
 ================
 
-CEIT temperature sensor network:
+CEIT sensor network, modem codes:
 This repository contains the files required for the raspberry pi to communicate with panStamp sensors and publish the data to a MQTT server.
 
 Install

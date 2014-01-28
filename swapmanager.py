@@ -111,7 +111,7 @@ class SwapManager(SwapInterface):
 	return status
 
     def publishData(self, status):
-	#publish data onto the server LIB/level4/climate_raw        
+	# publish data onto the server LIB/level4/climate_raw        
         data = json.dumps(status)
         L = len(data)
         data = data[1:L-1]
@@ -127,8 +127,9 @@ class SwapManager(SwapInterface):
     	    else:
 		print "PUBLISH FAILED: " + data
     	        #self.restart();	
-	except Exception as e:
-	    print "Error({0}): {1}".format(e.errno, e.strerror)
+	except:
+	    e = sys.exc_info()[0]
+	    print ("<p>Error: %s</p>" % e )
 
     def registerValueChanged(self, register):
         """
@@ -245,7 +246,8 @@ class SwapManager(SwapInterface):
 	    # Start MQTT client loop
 	    self.mqttc.loop_forever()
         except:
-	    print "Error({0}): {1}".format(e.errno, e.strerror)
+	    e = sys.exc_info()[0]
+	    print ("<p>Error: %s</p>" % e )
             self.restart() 
 
 
@@ -261,6 +263,7 @@ if __name__ == '__main__':
     settings = os.path.join(os.path.dirname(sys.argv[0]), "config", "settings.xml")
     try:
         sm = SwapManager(settings)
-    except Exception as e:
-	print "Error({0}): {1}".format(e.errno, e.strerror)
+    except:
+	e = sys.exc_info()[0]
+	print ("<p>Error: %s</p>" % e )
 	sys.exit(1)

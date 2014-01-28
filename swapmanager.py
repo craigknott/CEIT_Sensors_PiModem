@@ -110,7 +110,7 @@ class SwapManager(SwapInterface):
                         status.append(endp_data)
 	return status
 
-    def publishData(status):
+    def publishData(self, status):
 	#publish data onto the server LIB/level4/climate_raw        
         data = json.dumps(status)
         L = len(data)

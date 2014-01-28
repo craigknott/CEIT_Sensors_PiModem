@@ -79,33 +79,36 @@ class SwapManager(SwapInterface):
         if register.isConfig():
             return
         
-	# Check if debugging is on
+        # Check if debugging is on
         if DEBUG:
             print  "Register addr= " + str(register.getAddress()) + " id=" + str(register.id) + " changed to " + register.value.toAsciiHex()
         
-	# Get the list of end pts
+        # Get the list of end pts
         status = self.getEndPts(register)
         
         if len(status) > 0:
-	    # Publish data onto the server LIB/level4/climate_raw        
+            # Publish data onto the server LIB/level4/climate_raw        
     	    data = json.dumps(status)
+            
+            print status
+            
             L = len(data)
             data = data[1:L-1]
 
-	    try:
-	        print MQTT.config[str(data["id"])]
+            try:
+                print MQTT.config[str(data["id"])]
                 if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
     	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, data, retain = True)
-	        print "Done compare and pub attempt"
-	        # Check if mosquito accepted the publish or not.
+                print "Done compare and pub attempt"
+                # Check if mosquito accepted the publish or not.
     	        if (result == 0):
     	            print "PUBLISH SUCCESS: " + data
     	        else:
-	            print "PUBLISH FAILED: " + data
+                    print "PUBLISH FAILED: " + data
     	            #self.restart();	
-	    except:
-	        e = sys.exc_info()[0]
-	        print ("<publishData> Error: %s" % e )
+            except:
+                e = sys.exc_info()[0]
+                print ("<publishData> Error: %s" % e )
 
 
     def restart(self):

@@ -147,7 +147,7 @@ class SwapManager(SwapInterface):
         status = getEndPts(register)
         
         if len(status) > 0:
-
+	    publishData(status)
             
 
     def get_status(self, endpoints):

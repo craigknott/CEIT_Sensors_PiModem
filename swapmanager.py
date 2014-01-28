@@ -26,31 +26,22 @@ __author__="Daniel Berenguer"
 __date__  ="$Jan 23, 2012$"
 
 __edited__="Buddhika De Seram"
-__date__="02/01/2012"
+__date__="$02/01/2012$"
 
 __edited__="Craig Knott"
-__date__="20/11/2013"
+__date__="$20/11/2013$"
 #########################################################################
 
 from swap.SwapInterface import SwapInterface
 from swap.protocol.SwapDefs import SwapState
 from swap.xmltools.XmlSettings import XmlSettings
 from MQTT import MQTT
+
 import sys
-
+import os
 import json
-
-import logging
 import random
-
 import mosquitto
-
-logger = logging.getLogger('lib_temp')
-hdlr = logging.FileHandler('/var/log/lib_temp.log')
-formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-hdlr.setFormatter(formatter)
-logger.addHandler(hdlr) 
-logger.setLevel(logging.INFO)
 
 class SwapManager(SwapInterface):
     """
@@ -61,8 +52,6 @@ class SwapManager(SwapInterface):
         New mote detected by SWAP server
         
         @param mote: Mote detected
-        *****************************
-        need to send shit to the server here
         """
         if self._print_swap == True:
             print "New mote with address " + str(mote.address) + " : " + mote.definition.product + \
@@ -84,8 +73,6 @@ class SwapManager(SwapInterface):
         Mote state changed
         
         @param mote: Mote having changed
-        ******************************
-        need to add shit here, needs to send shit to the server
         """
         if self._print_swap == True:
             print "Mote with address " + str(mote.address) + " switched to \"" + \
@@ -97,36 +84,17 @@ class SwapManager(SwapInterface):
         Mote address changed
         
         @param mote: Mote having changed
-        
         """
         if self._print_swap == True:
             print "Mote changed address to " + str(mote.address)
 
-    def restart(self):
-	#command="/usr/bin/sudo /sbin/shutdown -r now"
-  	#command="/usr/bin/sudo svc -d /etc/service/lib && /usr/bin/sudo svc -u /etc/service/lib"
- 	command="/usr/bin/sudo killall python"	
-	import subprocess
-	process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
-	output = process.communicate()[0]
-	print output
 
-    def registerValueChanged(self, register):
-        """
-        Register value changed
-        
-        @param register: register object having changed
-        **********************
-        not sure what this does, think it returns the temperature
-        """
-        # Skip config registers
-        if register.isConfig():
-            return
-        
-        if self._print_swap == True:
-            print  "Register addr= " + str(register.getAddress()) + " id=" + str(register.id) + " changed to " + register.value.toAsciiHex()
-        
-        status = []
+    def getEndPts(self, register):
+	"""
+	Returns the list of end points from the register.
+	Helper function for registerValueChanged
+	"""
+	status = []
         # For every endpoint contained in this register
         for endp in register.parameters:
             strval = endp.getValueInAscii()
@@ -140,34 +108,51 @@ class SwapManager(SwapInterface):
                     endp_data = endp.dumps()
                     if endp_data is not None:
                         status.append(endp_data)
+	return status
+
+    def publishData(status):
+	#publish data onto the server LIB/level4/climate_raw        
+        data = json.dumps(status)
+        L = len(data)
+        data = data[1:L-1]
+
+	try:
+	    print MQTT.config[str(endp.id)]
+            if (str(MQTT.config[str(endp.id)]) == str(MQTT.pi_id)):
+    	        (result, mid) = self.mqttc.publish(MQTT.topic_temp, data, retain = True)
+
+	    # Check if mosquito accepted the publish or not.
+    	    if (result == 0):
+    	        print "PUBLISH SUCCESS: " + data
+    	    else:
+		print "PUBLISH FAILED: " + data
+    	        #self.restart();	
+	except Exception as e:
+	    print "Error({0}): {1}".format(e.errno, e.strerror)
+
+    def registerValueChanged(self, register):
+        """
+        Register value changed
+        
+        @param register: register object having changed
+        """
+        # Skip config registers
+        if register.isConfig():
+            return
+        
+        if self._print_swap == True:
+            print  "Register addr= " + str(register.getAddress()) + " id=" + str(register.id) + " changed to " + register.value.toAsciiHex()
+        
+	# Get the list of end pts
+        status = getEndPts(register)
         
         if len(status) > 0:
-#           publish data onto the server LIB/level4/climate_raw        
-            data = json.dumps(status)
-            L = len(data)
-            data = data[1:L-1]
-            print data
-            print "edpt id is:" + endp.id
-	    print "MQtt.pi_id = " + MQTT.pi_id 
-	    try:
-	        print MQTT.config[str(endp.id)]
-        	if (str(MQTT.config[str(endp.id)]) == str(MQTT.pi_id)):
-	    	    print "they equall" 
-	    	    (result, mid) = self.mqttc.publish(MQTT.topic_temp, data, retain = True)
-	    	    if (result == 0): #MOSQ_ERR_SUCCESS
-	    	        logger.info('Published data')
-	    	        print "published = " + data
-	    	    else:
-	    	        logger.error('Failed to publish data')
-	    	        self.restart();	
-	    except:
-	    	print "Error"
+
             
 
     def get_status(self, endpoints):
         """
         Return network status as a list of endpoints in JSON format
-        Method required by LagartoServer
         
         @param endpoints: list of endpoints being queried
         
@@ -186,16 +171,26 @@ class SwapManager(SwapInterface):
                     status.append(endp.dumps()) 
         return status
             
-  
     
     def stop(self):
         """
         Stop SWAP manager
         """
-        # Stop SWAP server
         logger.error('Server dead for some reason')
         self.server.stop()
         sys.exit(0)
+
+
+    def restart(self):
+	"""
+	Restarts this SWAP manager script
+	"""
+ 	command="/usr/bin/sudo svc -t /etc/service/lib"	
+	import subprocess
+	process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
+	output = process.communicate()[0]
+	print output
+
 
     def on_publish(self, mosq, userdata, mid):
         """
@@ -203,14 +198,20 @@ class SwapManager(SwapInterface):
         """
         print("PUBLISHED: MID: "+str(mid))
 
+
     def on_connect(self, mosq, userdata, rc):
         """
         Callback when client connects to mqtt server.
         """
         print("CONNECTED: RC: "+str(rc))
 
+
     def on_disconnect(self, obj, rc):
-	print "Disconnected Mosquitto " + str(rc)
+	"""
+	Callback when client disconnects from matt server successfully.
+	"""
+	print "DISCONNECTED: RC:  " + str(rc)
+
 
     def __init__(self, swap_settings=None):
         """
@@ -220,27 +221,46 @@ class SwapManager(SwapInterface):
         @param verbose: Print out SWAP frames or not
         @param monitor: Print out network events or not
         """
+
         # MAin configuration file
         self.swap_settings = swap_settings
+
         # Print SWAP activity
         self._print_swap = False
         
-        try:
-            # Superclass call
-            SwapInterface.__init__(self, swap_settings)
-        except:
-            self.restart() 
-
-        self.mqttc = mosquitto.Mosquitto("LIB-PI_"+str(MQTT.pi_id))
+	#Setup MQTT client
+        self.mqttc = mosquitto.Mosquitto("LIB-PI_"+str(MQTT.pi_id)+str(random.randrange(10000)))
         self.mqttc.on_connect = self.on_connect
 	self.mqttc.on_publish = self.on_publish
 	self.mqttc.connect(MQTT.server, 1883)
-       	try: 
+
+        try:
+            # Superclass call
+            SwapInterface.__init__(self, swap_settings)
+
+	    # Check if debug is on or not
+	    if XmlSettings.debug == 2:
+        	self._print_swap = True
+
+	    # Start MQTT client loop
 	    self.mqttc.loop_forever()
-	except:
-	    self.restart()	
+        except:
+	    print "Error({0}): {1}".format(e.errno, e.strerror)
+            self.restart() 
 
-        if XmlSettings.debug == 2:
-            self._print_swap = True
-   
 
+if __name__ == '__main__':
+    """
+    Function run if this script is the main script being run.
+    """
+    if (len(sys.argv) < 2):
+	print "Usage: python pyswapmanager.py PI_ID"
+	exit(0)
+
+    MQTT.pi_id = sys.argv[1]
+    settings = os.path.join(os.path.dirname(sys.argv[0]), "config", "settings.xml")
+    try:
+        sm = SwapManager(settings)
+    except Exception as e:
+	print "Error({0}): {1}".format(e.errno, e.strerror)
+	sys.exit(1)

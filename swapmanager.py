@@ -33,10 +33,9 @@ __date__="$20/11/2013$"
 #########################################################################
 
 from swap.SwapInterface import SwapInterface
-from swap.protocol.SwapDefs import SwapState
-from swap.xmltools.XmlSettings import XmlSettings
 from MQTT import MQTT
 
+DEBUG = True
 import sys
 import os
 import json
@@ -47,47 +46,6 @@ class SwapManager(SwapInterface):
     """
     SWAP Management Class
     """
-    def newMoteDetected(self, mote):
-        """
-        New mote detected by SWAP server
-        
-        @param mote: Mote detected
-        """
-        if self._print_swap == True:
-            print "New mote with address " + str(mote.address) + " : " + mote.definition.product + \
-            " (by " + mote.definition.manufacturer + ")"
-
-
-    def newEndpointDetected(self, endpoint):
-        """
-        New endpoint detected by SWAP server
-        
-        @param endpoint: Endpoint detected
-        """
-        if self._print_swap == True:
-            print "New endpoint with Reg ID = " + str(endpoint.getRegId()) + " : " + endpoint.name
-
-
-    def moteStateChanged(self, mote):
-        """
-        Mote state changed
-        
-        @param mote: Mote having changed
-        """
-        if self._print_swap == True:
-            print "Mote with address " + str(mote.address) + " switched to \"" + \
-            SwapState.toString(mote.state) + "\""     
-
-
-    def moteAddressChanged(self, mote):
-        """
-        Mote address changed
-        
-        @param mote: Mote having changed
-        """
-        if self._print_swap == True:
-            print "Mote changed address to " + str(mote.address)
-
 
     def getEndPts(self, register):
 	"""
@@ -99,7 +57,7 @@ class SwapManager(SwapInterface):
         for endp in register.parameters:
             strval = endp.getValueInAscii()
             if endp.valueChanged:
-                if self._print_swap:
+                if DEBUG:
                     if endp.unit is not None:
                         strval += " " + endp.unit.name
                     print endp.name + " in address " + str(endp.getRegAddress()) + " changed to " + strval
@@ -122,7 +80,7 @@ class SwapManager(SwapInterface):
             return
         
 	# Check if debugging is on
-        if self._print_swap == True:
+        if DEBUG:
             print  "Register addr= " + str(register.getAddress()) + " id=" + str(register.id) + " changed to " + register.value.toAsciiHex()
         
 	# Get the list of end pts
@@ -148,48 +106,17 @@ class SwapManager(SwapInterface):
 	    except:
 	        e = sys.exc_info()[0]
 	        print ("<publishData> Error: %s" % e )
-            
-
-    def get_status(self, endpoints):
-        """
-        Return network status as a list of endpoints in JSON format
-        
-        @param endpoints: list of endpoints being queried
-        
-        @return list of endpoints in JSON format
-        """
-        status = []
-        if endpoints is None:
-            for mote in self.network.motes:
-                for reg in mote.regular_registers:
-                    for endp in reg.parameters:
-                        status.append(endp.dumps())
-        else:
-            for item in endpoints:
-                endp = self.get_endpoint(item["id"], item["location"], item["name"])
-                if endp is not None:
-                    status.append(endp.dumps()) 
-        return status
-            
-    
-    def stop(self):
-        """
-        Stop SWAP manager
-        """
-        logger.error('Server dead for some reason')
-        self.server.stop()
-        sys.exit(0)
 
 
     def restart(self):
-	"""
-	Restarts this SWAP manager script
-	"""
- 	command="/usr/bin/sudo svc -t /etc/service/lib"	
-	import subprocess
-	process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
-	output = process.communicate()[0]
-	print output
+        """
+        Restarts this SWAP manager script
+        """
+        command="/usr/bin/sudo svc -t /etc/service/lib"	
+        import subprocess
+        process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
+        output = process.communicate()[0]
+        print output
 
 
     def on_publish(self, mosq, userdata, mid):
@@ -207,10 +134,10 @@ class SwapManager(SwapInterface):
 
 
     def on_disconnect(self, obj, rc):
-	"""
-	Callback when client disconnects from matt server successfully.
-	"""
-	print "DISCONNECTED: RC:  " + str(rc)
+        """
+        Callback when client disconnects from mqtt server successfully.
+        """
+        print "DISCONNECTED: RC:  " + str(rc)
 
 
     def __init__(self, swap_settings=None):
@@ -226,27 +153,23 @@ class SwapManager(SwapInterface):
         self.swap_settings = swap_settings
 
         # Print SWAP activity
-        self._print_swap = False
+        DEBUG = False
         
-	#Setup MQTT client
+        #Setup MQTT client
         self.mqttc = mosquitto.Mosquitto("LIB-PI_"+str(MQTT.pi_id)+str(random.randrange(10000)))
         self.mqttc.on_connect = self.on_connect
-	self.mqttc.on_publish = self.on_publish
-	self.mqttc.connect(MQTT.server, 1883)
+        self.mqttc.on_publish = self.on_publish
+        self.mqttc.connect(MQTT.server, 1883)
 
         try:
             # Superclass call
             SwapInterface.__init__(self, swap_settings)
 
-	    # Check if debug is on or not
-	    if XmlSettings.debug == 2:
-        	self._print_swap = True
-
-	    # Start MQTT client loop
-	    self.mqttc.loop_forever()
+            # Start MQTT client loop
+            self.mqttc.loop_forever()
         except:
-	    e = sys.exc_info()[0]
-	    print ("<__init__> Error: %s" % e )
+            e = sys.exc_info()[0]
+            print ("<__init__> Error: %s" % e )
             self.restart() 
 
 
@@ -255,14 +178,14 @@ if __name__ == '__main__':
     Function run if this script is the main script being run.
     """
     if (len(sys.argv) < 2):
-	print "Usage: python pyswapmanager.py PI_ID"
-	exit(0)
+        print "Usage: python pyswapmanager.py PI_ID"
+        exit(0)
 
     MQTT.pi_id = sys.argv[1]
     settings = os.path.join(os.path.dirname(sys.argv[0]), "config", "settings.xml")
     try:
         sm = SwapManager(settings)
     except:
-	e = sys.exc_info()[0]
-	print ("<__main__> Error: %s" % e )
-	sys.exit(1)
+        e = sys.exc_info()[0]
+        print ("<__main__> Error: %s" % e )
+        sys.exit(1)

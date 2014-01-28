@@ -135,9 +135,8 @@ class SwapManager(SwapInterface):
             data = data[1:L-1]
 
 	    try:
-	        print "In try, endp.id = " + endp.id
-	        print MQTT.config[str(endp.id)]
-                if (str(MQTT.config[str(endp.id)]) == str(MQTT.pi_id)):
+	        print MQTT.config[str(data["id"])]
+                if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
     	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, data, retain = True)
 	        print "Done compare and pub attempt"
 	        # Check if mosquito accepted the publish or not.

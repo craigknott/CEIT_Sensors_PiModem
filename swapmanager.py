@@ -110,27 +110,6 @@ class SwapManager(SwapInterface):
                         status.append(endp_data)
 	return status
 
-    def publishData(self, status):
-	# publish data onto the server LIB/level4/climate_raw        
-        data = json.dumps(status)
-        L = len(data)
-        data = data[1:L-1]
-
-	try:
-	    print "In try"
-	    print MQTT.config[str(endp.id)]
-            if (str(MQTT.config[str(endp.id)]) == str(MQTT.pi_id)):
-    	        (result, mid) = self.mqttc.publish(MQTT.topic_temp, data, retain = True)
-	    print "Done compare and pub attempt"
-	    # Check if mosquito accepted the publish or not.
-    	    if (result == 0):
-    	        print "PUBLISH SUCCESS: " + data
-    	    else:
-		print "PUBLISH FAILED: " + data
-    	        #self.restart();	
-	except:
-	    e = sys.exc_info()[0]
-	    print ("<publishData> Error: %s" % e )
 
     def registerValueChanged(self, register):
         """
@@ -142,6 +121,7 @@ class SwapManager(SwapInterface):
         if register.isConfig():
             return
         
+	# Check if debugging is on
         if self._print_swap == True:
             print  "Register addr= " + str(register.getAddress()) + " id=" + str(register.id) + " changed to " + register.value.toAsciiHex()
         
@@ -149,7 +129,26 @@ class SwapManager(SwapInterface):
         status = self.getEndPts(register)
         
         if len(status) > 0:
-	    self.publishData(status)
+	    # Publish data onto the server LIB/level4/climate_raw        
+    	    data = json.dumps(status)
+            L = len(data)
+            data = data[1:L-1]
+
+	    try:
+	        print "In try"
+	        print MQTT.config[str(endp.id)]
+                if (str(MQTT.config[str(endp.id)]) == str(MQTT.pi_id)):
+    	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, data, retain = True)
+	        print "Done compare and pub attempt"
+	        # Check if mosquito accepted the publish or not.
+    	        if (result == 0):
+    	            print "PUBLISH SUCCESS: " + data
+    	        else:
+	            print "PUBLISH FAILED: " + data
+    	            #self.restart();	
+	    except:
+	        e = sys.exc_info()[0]
+	        print ("<publishData> Error: %s" % e )
             
 
     def get_status(self, endpoints):

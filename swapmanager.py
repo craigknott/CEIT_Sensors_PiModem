@@ -144,10 +144,10 @@ class SwapManager(SwapInterface):
             print  "Register addr= " + str(register.getAddress()) + " id=" + str(register.id) + " changed to " + register.value.toAsciiHex()
         
 	# Get the list of end pts
-        status = getEndPts(register)
+        status = self.getEndPts(register)
         
         if len(status) > 0:
-	    publishData(status)
+	    self.publishData(status)
             
 
     def get_status(self, endpoints):

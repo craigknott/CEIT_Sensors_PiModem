@@ -90,32 +90,28 @@ class SwapManager(SwapInterface):
             # Publish data onto the server LIB/level4/climate_raw        
     	    data = json.dumps(status)
             
-            print status
-            
             L = len(data)
-            data = data[1:L-1]
-
-            try:
-                print MQTT.config[str(data["id"])]
-                if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
-    	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, data, retain = True)
-                print "Done compare and pub attempt"
-                # Check if mosquito accepted the publish or not.
-    	        if (result == 0):
-    	            print "PUBLISH SUCCESS: " + data
-    	        else:
-                    print "PUBLISH FAILED: " + data
-    	            #self.restart();	
+            data = status[0] 
+	    result = -1
+            
+	    try:
+		if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
+    	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(data), retain = True)
             except:
                 e = sys.exc_info()[0]
                 print ("<publishData> Error: %s" % e )
+                
+	    # Check if mosquito accepted the publish or not.
+    	    if (result == 0):
+    	        print "PUBLISH SUCCESS: " + str(data)
+    	    else:
+                print "PUBLISH FAILED: " + str(data)
+    	        #sys.exit(2)        
 
-
-    def restart(self):
+    def shell_command(self, command):
         """
-        Restarts this SWAP manager script
+ 	Sends command to bash shell	
         """
-        command="/usr/bin/sudo svc -t /etc/service/lib"	
         import subprocess
         process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
         output = process.communicate()[0]
@@ -148,8 +144,6 @@ class SwapManager(SwapInterface):
         Class constructor
         
         @param swap_settings: path to the main SWAP configuration file
-        @param verbose: Print out SWAP frames or not
-        @param monitor: Print out network events or not
         """
 
         # MAin configuration file
@@ -173,8 +167,7 @@ class SwapManager(SwapInterface):
         except:
             e = sys.exc_info()[0]
             print ("<__init__> Error: %s" % e )
-            self.restart() 
-
+	    sys.exit(0)
 
 if __name__ == '__main__':
     """
@@ -187,8 +180,8 @@ if __name__ == '__main__':
     MQTT.pi_id = sys.argv[1]
     settings = os.path.join(os.path.dirname(sys.argv[0]), "config", "settings.xml")
     try:
-        sm = SwapManager(settings)
+    	sm = SwapManager(settings)
     except:
         e = sys.exc_info()[0]
         print ("<__main__> Error: %s" % e )
-        sys.exit(1)
+	sys.exit(0)

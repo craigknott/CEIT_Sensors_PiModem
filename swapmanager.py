@@ -18,7 +18,7 @@ class SwapManager(SwapInterface):
 	Returns the list of end points from the register.
 	Helper function for registerValueChanged
 	"""
-	status = []
+	    status = []
         # For every endpoint contained in this register
         for endp in register.parameters:
             strval = endp.getValueInAscii()
@@ -60,13 +60,13 @@ class SwapManager(SwapInterface):
 	    try:
 			if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
 				(result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
-    	        # Check if mosquito accepted the publish or not.
-	    	    if (result == 0):
-	    	    	print "PUBLISH SUCCESS: " + str(pub_data)
+    	        # Check if mosquito accepted the publish or not. 
+    	        if (result == 0):
+	    	        print "PUBLISH SUCCESS: " + str(pub_data)
 	    	    else:
-	    	    	print "PUBLISH FAILED: " + str(pub_data)
+	    	        print "PUBLISH FAILED: " + str(pub_data)
 	    	        #sys.exit(2) 
-            except:
+	        except:
                 e = sys.exc_info()[0]
                 print ("<publishData> Error: %s" % e )
                 

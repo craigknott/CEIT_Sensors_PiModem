@@ -18,20 +18,20 @@ class SwapManager(SwapInterface):
 	Returns the list of end points from the register.
 	Helper function for registerValueChanged
 	"""
-	    status = []
-        # For every endpoint contained in this register
-        for endp in register.parameters:
-            strval = endp.getValueInAscii()
-            if endp.valueChanged:
-                if DEBUG:
-                    if endp.unit is not None:
-                        strval += " " + endp.unit.name
-                    print endp.name + " in address " + str(endp.getRegAddress()) + " changed to " + strval
-                               
-                if endp.display:
-                    endp_data = endp.dumps()
-                    if endp_data is not None:
-                        status.append(endp_data)
+    status = []
+    # For every endpoint contained in this register
+    for endp in register.parameters:
+        strval = endp.getValueInAscii()
+        if endp.valueChanged:
+            if DEBUG:
+                if endp.unit is not None:
+                    strval += " " + endp.unit.name
+                print endp.name + " in address " + str(endp.getRegAddress()) + " changed to " + strval
+                           
+            if endp.display:
+                endp_data = endp.dumps()
+                if endp_data is not None:
+                    status.append(endp_data)
 	return status
 
 
@@ -57,18 +57,18 @@ class SwapManager(SwapInterface):
             pub_data = json.dumps(status)[1:-1]
             data = status[0] 
             
-			try:
-				if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
-					(result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
-					# Check if mosquito accepted the publish or not. 
-					if (result == 0):
-						print "PUBLISH SUCCESS: " + str(pub_data)
-					else:
-						print "PUBLISH FAILED: " + str(pub_data)
-						#sys.exit(2) 
-			except:
-				e = sys.exc_info()[0]
-				print ("<publishData> Error: %s" % e )
+            try:
+                if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
+                    (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
+                    # Check if mosquito accepted the publish or not. 
+                    if (result == 0):
+                        print "PUBLISH SUCCESS: " + str(pub_data)
+                    else:
+                        print "PUBLISH FAILED: " + str(pub_data)
+                        #sys.exit(2) 
+            except:
+                e = sys.exc_info()[0]
+                print ("<publishData> Error: %s" % e )
 
 	          
 
@@ -109,10 +109,10 @@ class SwapManager(SwapInterface):
         
         @param swap_settings: path to the main SWAP configuration file
         """
-
+        
         # MAin configuration file
         self.swap_settings = swap_settings
-
+        
         # Print SWAP activity
         DEBUG = False
         
@@ -121,17 +121,17 @@ class SwapManager(SwapInterface):
         self.mqttc.on_connect = self.on_connect
         self.mqttc.on_publish = self.on_publish
         self.mqttc.connect(MQTT.server, 1883)
-
+        
         try:
             # Superclass call
             SwapInterface.__init__(self, swap_settings)
-
+            
             # Start MQTT client loop
             self.mqttc.loop_forever()
         except:
             e = sys.exc_info()[0]
             print ("<__init__> Error: %s" % e )
-	    sys.exit(0)
+            sys.exit(0)
 
 if __name__ == '__main__':
     """

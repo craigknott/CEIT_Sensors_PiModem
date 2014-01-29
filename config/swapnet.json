@@ -9,8 +9,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "1.516", 
+                "timestamp": "29 Jan 2014 13:23:08", 
+                "value": "1.419", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -28,8 +28,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "22.0", 
+                "timestamp": "29 Jan 2014 13:23:07", 
+                "value": "21.7", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -57,8 +57,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "0.972", 
+                "timestamp": "29 Jan 2014 13:21:36", 
+                "value": "1.5", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -76,8 +76,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "22.4", 
+                "timestamp": "29 Jan 2014 13:21:36", 
+                "value": "20.2", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -105,7 +105,7 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
+                "timestamp": "29 Jan 2014 13:15:15", 
                 "value": "1.0", 
                 "location": "SWAP", 
                 "units": [
@@ -124,7 +124,7 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
+                "timestamp": "29 Jan 2014 13:15:15", 
                 "value": "19.4", 
                 "location": "SWAP", 
                 "units": [
@@ -153,8 +153,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "1.439", 
+                "timestamp": "29 Jan 2014 13:18:25", 
+                "value": "1.488", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -172,8 +172,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "27.2", 
+                "timestamp": "29 Jan 2014 13:18:25", 
+                "value": "25.7", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -201,8 +201,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "3.172", 
+                "timestamp": "29 Jan 2014 13:24:50", 
+                "value": "3.155", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -220,8 +220,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "19.2", 
+                "timestamp": "29 Jan 2014 13:24:49", 
+                "value": "20.3", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -241,8 +241,8 @@
               {
                 "direction": "inp", 
                 "name": "SPL", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "-4.0", 
+                "timestamp": "29 Jan 2014 13:24:49", 
+                "value": "97.0", 
                 "location": "SWAP", 
                 "units": [
                   "SPL"
@@ -268,8 +268,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "1.496", 
+                "timestamp": "29 Jan 2014 13:26:22", 
+                "value": "0.99", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -287,8 +287,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "24.5", 
+                "timestamp": "29 Jan 2014 13:26:22", 
+                "value": "21.9", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -316,8 +316,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "3.209", 
+                "timestamp": "29 Jan 2014 13:20:58", 
+                "value": "3.19", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -335,8 +335,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "24.4", 
+                "timestamp": "29 Jan 2014 13:20:57", 
+                "value": "23.2", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -356,8 +356,8 @@
               {
                 "direction": "inp", 
                 "name": "Light", 
-                "timestamp": "23 Jan 2014 12:12:58", 
-                "value": "731.0", 
+                "timestamp": "29 Jan 2014 13:20:57", 
+                "value": "988.0", 
                 "location": "SWAP", 
                 "units": [
                   "Light"
@@ -383,7 +383,7 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:58", 
+                "timestamp": "29 Jan 2014 13:15:16", 
                 "value": "2.149", 
                 "location": "SWAP", 
                 "units": [
@@ -402,7 +402,7 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:58", 
+                "timestamp": "29 Jan 2014 13:15:16", 
                 "value": "27.9", 
                 "location": "SWAP", 
                 "units": [
@@ -431,8 +431,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "3.263", 
+                "timestamp": "29 Jan 2014 13:19:05", 
+                "value": "3.264", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -450,8 +450,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "22.2", 
+                "timestamp": "29 Jan 2014 13:19:06", 
+                "value": "22.3", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -471,8 +471,8 @@
               {
                 "direction": "inp", 
                 "name": "SPL", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "99.0", 
+                "timestamp": "29 Jan 2014 13:19:05", 
+                "value": "28.0", 
                 "location": "SWAP", 
                 "units": [
                   "SPL"
@@ -498,8 +498,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "1.468", 
+                "timestamp": "29 Jan 2014 13:25:51", 
+                "value": "0.961", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -517,8 +517,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "22.2", 
+                "timestamp": "29 Jan 2014 13:25:51", 
+                "value": "22.0", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -546,8 +546,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "1.487", 
+                "timestamp": "29 Jan 2014 13:19:26", 
+                "value": "1.459", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -565,8 +565,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "23.5", 
+                "timestamp": "29 Jan 2014 13:19:26", 
+                "value": "22.1", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -594,8 +594,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "1.474", 
+                "timestamp": "29 Jan 2014 13:24:54", 
+                "value": "1.462", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -613,8 +613,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "22.5", 
+                "timestamp": "29 Jan 2014 13:24:54", 
+                "value": "23.6", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -642,7 +642,7 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
+                "timestamp": "29 Jan 2014 13:15:16", 
                 "value": "3.352", 
                 "location": "SWAP", 
                 "units": [
@@ -661,7 +661,7 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
+                "timestamp": "29 Jan 2014 13:15:16", 
                 "value": "25.2", 
                 "location": "SWAP", 
                 "units": [
@@ -682,8 +682,8 @@
               {
                 "direction": "inp", 
                 "name": "Light", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "254.0", 
+                "timestamp": "29 Jan 2014 13:21:45", 
+                "value": "362.0", 
                 "location": "SWAP", 
                 "units": [
                   "Light"
@@ -709,8 +709,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "1.514", 
+                "timestamp": "29 Jan 2014 13:16:06", 
+                "value": "1.005", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -728,8 +728,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "25.7", 
+                "timestamp": "29 Jan 2014 13:16:06", 
+                "value": "24.4", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -757,8 +757,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "3.218", 
+                "timestamp": "29 Jan 2014 13:22:05", 
+                "value": "3.209", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -776,7 +776,7 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
+                "timestamp": "29 Jan 2014 13:15:17", 
                 "value": "20.5", 
                 "location": "SWAP", 
                 "units": [
@@ -797,8 +797,8 @@
               {
                 "direction": "inp", 
                 "name": "SPL", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "-38.0", 
+                "timestamp": "29 Jan 2014 13:22:04", 
+                "value": "100.0", 
                 "location": "SWAP", 
                 "units": [
                   "SPL"
@@ -824,8 +824,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "1.512", 
+                "timestamp": "29 Jan 2014 13:23:48", 
+                "value": "1.32", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -843,8 +843,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "23.7", 
+                "timestamp": "29 Jan 2014 13:23:48", 
+                "value": "23.9", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -872,8 +872,8 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "3.274", 
+                "timestamp": "29 Jan 2014 13:25:49", 
+                "value": "3.264", 
                 "location": "SWAP", 
                 "units": [
                   "V"
@@ -891,8 +891,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "21.7", 
+                "timestamp": "29 Jan 2014 13:25:49", 
+                "value": "21.4", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -912,8 +912,8 @@
               {
                 "direction": "inp", 
                 "name": "Light", 
-                "timestamp": "23 Jan 2014 12:12:59", 
-                "value": "102.0", 
+                "timestamp": "29 Jan 2014 13:25:48", 
+                "value": "125.0", 
                 "location": "SWAP", 
                 "units": [
                   "Light"
@@ -939,7 +939,7 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:12:59", 
+                "timestamp": "29 Jan 2014 13:15:17", 
                 "value": "0.0", 
                 "location": "SWAP", 
                 "units": [
@@ -958,7 +958,7 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:12:59", 
+                "timestamp": "29 Jan 2014 13:15:17", 
                 "value": "0.0", 
                 "location": "SWAP", 
                 "units": [
@@ -979,7 +979,7 @@
               {
                 "direction": "inp", 
                 "name": "PIR", 
-                "timestamp": "23 Jan 2014 12:12:59", 
+                "timestamp": "29 Jan 2014 13:15:17", 
                 "value": "0.0", 
                 "location": "SWAP", 
                 "units": [
@@ -1006,7 +1006,7 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "23 Jan 2014 12:13:00", 
+                "timestamp": "29 Jan 2014 13:15:17", 
                 "value": "0.0", 
                 "location": "SWAP", 
                 "units": [
@@ -1025,8 +1025,8 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "23 Jan 2014 12:13:04", 
-                "value": "98.1", 
+                "timestamp": "29 Jan 2014 13:15:22", 
+                "value": "95.7", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -1046,7 +1046,7 @@
               {
                 "direction": "inp", 
                 "name": "PIR", 
-                "timestamp": "23 Jan 2014 12:13:25", 
+                "timestamp": "29 Jan 2014 13:27:34", 
                 "value": "1.0", 
                 "location": "SWAP", 
                 "units": [
@@ -1063,6 +1063,70 @@
         ], 
         "pcode": "0000001500000003", 
         "address": 1, 
+        "name": "PIR Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "value": "0.0", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "31.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "value": "0.0", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "31.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "PIR", 
+                "value": "0.0", 
+                "location": "SWAP", 
+                "units": [
+                  "Motion"
+                ], 
+                "type": "num", 
+                "id": "31.13.0", 
+                "unit": "Motion"
+              }
+            ], 
+            "id": 13, 
+            "name": "PIR Motion"
+          }
+        ], 
+        "pcode": "0000001500000003", 
+        "address": 31, 
         "name": "PIR Sensor", 
         "manufacturer": "panStamp"
       }

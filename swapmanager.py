@@ -58,13 +58,13 @@ class SwapManager(SwapInterface):
             data = status[0] 
             
 	    try:
-		if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
-    	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
-    	            # Check if mosquito accepted the publish or not.
+			if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
+    	        (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
+    	        # Check if mosquito accepted the publish or not.
 	    	    if (result == 0):
 	    	        print "PUBLISH SUCCESS: " + str(pub_data)
 	    	    else:
-	                print "PUBLISH FAILED: " + str(pub_data)
+	    	    	print "PUBLISH FAILED: " + str(pub_data)
 	    	        #sys.exit(2) 
             except:
                 e = sys.exc_info()[0]
@@ -74,7 +74,7 @@ class SwapManager(SwapInterface):
 
     def shell_command(self, command):
         """
- 	Sends command to bash shell	
+ 		Sends command to bash shell	
         """
         import subprocess
         process = subprocess.Popen(command.split(), stdout=subprocess.PIPE)

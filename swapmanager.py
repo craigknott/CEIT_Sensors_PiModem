@@ -59,7 +59,7 @@ class SwapManager(SwapInterface):
             
 	    try:
 			if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
-    	        (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
+				(result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
     	        # Check if mosquito accepted the publish or not.
 	    	    if (result == 0):
 	    	    	print "PUBLISH SUCCESS: " + str(pub_data)

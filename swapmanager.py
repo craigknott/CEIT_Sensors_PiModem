@@ -62,7 +62,7 @@ class SwapManager(SwapInterface):
     	        (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
     	        # Check if mosquito accepted the publish or not.
 	    	    if (result == 0):
-	    	        print "PUBLISH SUCCESS: " + str(pub_data)
+	    	    	print "PUBLISH SUCCESS: " + str(pub_data)
 	    	    else:
 	    	    	print "PUBLISH FAILED: " + str(pub_data)
 	    	        #sys.exit(2) 

@@ -88,24 +88,22 @@ class SwapManager(SwapInterface):
         
         if len(status) > 0:
             # Publish data onto the server LIB/level4/climate_raw        
-    	    data = json.dumps(status)
-            
-            L = len(data)
+    	    pub_data = json.dumps(status)[1:-1]
             data = status[0] 
 	    result = -1
             
 	    try:
 		if (str(MQTT.config[str(data["id"])]) == str(MQTT.pi_id)):
-    	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(data), retain = True)
+    	            (result, mid) = self.mqttc.publish(MQTT.topic_temp, str(pub_data), retain = True)
             except:
                 e = sys.exc_info()[0]
                 print ("<publishData> Error: %s" % e )
                 
 	    # Check if mosquito accepted the publish or not.
     	    if (result == 0):
-    	        print "PUBLISH SUCCESS: " + str(data)
+    	        print "PUBLISH SUCCESS: " + str(pub_data)
     	    else:
-                print "PUBLISH FAILED: " + str(data)
+                print "PUBLISH FAILED: " + str(pub_data)
     	        #sys.exit(2)        
 
     def shell_command(self, command):

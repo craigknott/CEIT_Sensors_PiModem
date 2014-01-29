@@ -18,21 +18,21 @@ class SwapManager(SwapInterface):
 	Returns the list of end points from the register.
 	Helper function for registerValueChanged
 	"""
-    status = []
-    # For every endpoint contained in this register
-    for endp in register.parameters:
-        strval = endp.getValueInAscii()
-        if endp.valueChanged:
-            if DEBUG:
-                if endp.unit is not None:
-                    strval += " " + endp.unit.name
-                print endp.name + " in address " + str(endp.getRegAddress()) + " changed to " + strval
+        status = []
+        # For every endpoint contained in this register
+        for endp in register.parameters:
+            strval = endp.getValueInAscii()
+            if endp.valueChanged:
+                if DEBUG:
+                    if endp.unit is not None:
+                        strval += " " + endp.unit.name
+                    print endp.name + " in address " + str(endp.getRegAddress()) + " changed to " + strval
                            
-            if endp.display:
-                endp_data = endp.dumps()
-                if endp_data is not None:
-                    status.append(endp_data)
-    return status
+                if endp.display:
+                    endp_data = endp.dumps()
+                    if endp_data is not None:
+                        status.append(endp_data)
+        return status
 
 
     def registerValueChanged(self, register):
@@ -131,7 +131,8 @@ class SwapManager(SwapInterface):
         except:
             e = sys.exc_info()[0]
             print ("<__init__> Error: %s" % e )
-            sys.exit(0)
+            self.stop()
+            sys.exit(1)
 
 if __name__ == '__main__':
     """
@@ -148,4 +149,4 @@ if __name__ == '__main__':
     except:
         e = sys.exc_info()[0]
         print ("<__main__> Error: %s" % e )
-        sys.exit(0)
+        sys.exit(1)

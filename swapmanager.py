@@ -32,7 +32,7 @@ class SwapManager(SwapInterface):
                 endp_data = endp.dumps()
                 if endp_data is not None:
                     status.append(endp_data)
-	return status
+    return status
 
 
     def registerValueChanged(self, register):
@@ -140,12 +140,12 @@ if __name__ == '__main__':
     if (len(sys.argv) < 2):
         print "Usage: python pyswapmanager.py PI_ID"
         exit(0)
-
+    
     MQTT.pi_id = sys.argv[1]
     settings = os.path.join(os.path.dirname(sys.argv[0]), "config", "settings.xml")
     try:
-    	sm = SwapManager(settings)
+        sm = SwapManager(settings)
     except:
         e = sys.exc_info()[0]
         print ("<__main__> Error: %s" % e )
-	sys.exit(0)
+        sys.exit(0)

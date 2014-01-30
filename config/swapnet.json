@@ -9,1004 +9,6 @@
               {
                 "direction": "inp", 
                 "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:23:08", 
-                "value": "1.419", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "27.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:23:07", 
-                "value": "21.7", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "27.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 27, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:21:36", 
-                "value": "1.5", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "54.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:21:36", 
-                "value": "20.2", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "54.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 54, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:15:15", 
-                "value": "1.0", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "42.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:15:15", 
-                "value": "19.4", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "42.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 42, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:18:25", 
-                "value": "1.488", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "33.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:18:25", 
-                "value": "25.7", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "33.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 33, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:24:50", 
-                "value": "3.155", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "30.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:24:49", 
-                "value": "20.3", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "30.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "SPL", 
-                "timestamp": "29 Jan 2014 13:24:49", 
-                "value": "97.0", 
-                "location": "SWAP", 
-                "units": [
-                  "SPL"
-                ], 
-                "type": "num", 
-                "id": "30.13.0", 
-                "unit": "SPL"
-              }
-            ], 
-            "id": 13, 
-            "name": "SPL Level"
-          }
-        ], 
-        "pcode": "0000001500000002", 
-        "address": 30, 
-        "name": "Temperature and SPL Sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:26:22", 
-                "value": "0.99", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "25.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:26:22", 
-                "value": "21.9", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "25.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 25, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:20:58", 
-                "value": "3.19", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "22.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:20:57", 
-                "value": "23.2", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "22.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Light", 
-                "timestamp": "29 Jan 2014 13:20:57", 
-                "value": "988.0", 
-                "location": "SWAP", 
-                "units": [
-                  "Light"
-                ], 
-                "type": "num", 
-                "id": "22.13.0", 
-                "unit": "Light"
-              }
-            ], 
-            "id": 13, 
-            "name": "Light Level"
-          }
-        ], 
-        "pcode": "0000001500000001", 
-        "address": 22, 
-        "name": "Temperature and Light Sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:15:16", 
-                "value": "2.149", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "34.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:15:16", 
-                "value": "27.9", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "34.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 34, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:19:05", 
-                "value": "3.264", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "23.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:19:06", 
-                "value": "22.3", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "23.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "SPL", 
-                "timestamp": "29 Jan 2014 13:19:05", 
-                "value": "28.0", 
-                "location": "SWAP", 
-                "units": [
-                  "SPL"
-                ], 
-                "type": "num", 
-                "id": "23.13.0", 
-                "unit": "SPL"
-              }
-            ], 
-            "id": 13, 
-            "name": "SPL Level"
-          }
-        ], 
-        "pcode": "0000001500000002", 
-        "address": 23, 
-        "name": "Temperature and SPL Sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:25:51", 
-                "value": "0.961", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "13.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:25:51", 
-                "value": "22.0", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "13.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 13, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:19:26", 
-                "value": "1.459", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "29.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:19:26", 
-                "value": "22.1", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "29.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 29, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:24:54", 
-                "value": "1.462", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "32.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:24:54", 
-                "value": "23.6", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "32.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 32, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:15:16", 
-                "value": "3.352", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "255.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:15:16", 
-                "value": "25.2", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "255.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Light", 
-                "timestamp": "29 Jan 2014 13:21:45", 
-                "value": "362.0", 
-                "location": "SWAP", 
-                "units": [
-                  "Light"
-                ], 
-                "type": "num", 
-                "id": "255.13.0", 
-                "unit": "Light"
-              }
-            ], 
-            "id": 13, 
-            "name": "Light Level"
-          }
-        ], 
-        "pcode": "0000001500000001", 
-        "address": 255, 
-        "name": "Temperature and Light Sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:16:06", 
-                "value": "1.005", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "18.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:16:06", 
-                "value": "24.4", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "18.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 18, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:22:05", 
-                "value": "3.209", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "17.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:15:17", 
-                "value": "20.5", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "17.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "SPL", 
-                "timestamp": "29 Jan 2014 13:22:04", 
-                "value": "100.0", 
-                "location": "SWAP", 
-                "units": [
-                  "SPL"
-                ], 
-                "type": "num", 
-                "id": "17.13.0", 
-                "unit": "SPL"
-              }
-            ], 
-            "id": 13, 
-            "name": "SPL Level"
-          }
-        ], 
-        "pcode": "0000001500000002", 
-        "address": 17, 
-        "name": "Temperature and SPL Sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:23:48", 
-                "value": "1.32", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "45.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:23:48", 
-                "value": "23.9", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "45.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }
-        ], 
-        "pcode": "0000000100000004", 
-        "address": 45, 
-        "name": "Temperature sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:25:49", 
-                "value": "3.264", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "40.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:25:49", 
-                "value": "21.4", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "40.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Light", 
-                "timestamp": "29 Jan 2014 13:25:48", 
-                "value": "125.0", 
-                "location": "SWAP", 
-                "units": [
-                  "Light"
-                ], 
-                "type": "num", 
-                "id": "40.13.0", 
-                "unit": "Light"
-              }
-            ], 
-            "id": 13, 
-            "name": "Light Level"
-          }
-        ], 
-        "pcode": "0000001500000001", 
-        "address": 40, 
-        "name": "Temperature and Light Sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:15:17", 
-                "value": "0.0", 
-                "location": "SWAP", 
-                "units": [
-                  "V"
-                ], 
-                "type": "num", 
-                "id": "51.11.0", 
-                "unit": "V"
-              }
-            ], 
-            "id": 11, 
-            "name": "Voltage supply"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:15:17", 
-                "value": "0.0", 
-                "location": "SWAP", 
-                "units": [
-                  "C", 
-                  "F", 
-                  "K"
-                ], 
-                "type": "num", 
-                "id": "51.12.0", 
-                "unit": "C"
-              }
-            ], 
-            "id": 12, 
-            "name": "Temperature"
-          }, 
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "PIR", 
-                "timestamp": "29 Jan 2014 13:15:17", 
-                "value": "0.0", 
-                "location": "SWAP", 
-                "units": [
-                  "Motion"
-                ], 
-                "type": "num", 
-                "id": "51.13.0", 
-                "unit": "Motion"
-              }
-            ], 
-            "id": 13, 
-            "name": "PIR Motion"
-          }
-        ], 
-        "pcode": "0000001500000003", 
-        "address": 51, 
-        "name": "PIR Sensor", 
-        "manufacturer": "panStamp"
-      }, 
-      {
-        "registers": [
-          {
-            "endpoints": [
-              {
-                "direction": "inp", 
-                "name": "Voltage", 
-                "timestamp": "29 Jan 2014 13:15:17", 
                 "value": "0.0", 
                 "location": "SWAP", 
                 "units": [
@@ -1025,8 +27,7 @@
               {
                 "direction": "inp", 
                 "name": "Temperature", 
-                "timestamp": "29 Jan 2014 13:15:22", 
-                "value": "95.7", 
+                "value": "0.0", 
                 "location": "SWAP", 
                 "units": [
                   "C", 
@@ -1046,7 +47,7 @@
               {
                 "direction": "inp", 
                 "name": "PIR", 
-                "timestamp": "29 Jan 2014 13:27:34", 
+                "timestamp": "30 Jan 2014 15:14:34", 
                 "value": "1.0", 
                 "location": "SWAP", 
                 "units": [
@@ -1111,7 +112,8 @@
               {
                 "direction": "inp", 
                 "name": "PIR", 
-                "value": "0.0", 
+                "timestamp": "30 Jan 2014 15:08:24", 
+                "value": "1.0", 
                 "location": "SWAP", 
                 "units": [
                   "Motion"
@@ -1128,6 +130,1001 @@
         "pcode": "0000001500000003", 
         "address": 31, 
         "name": "PIR Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "value": "0.0", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "51.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "value": "0.0", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "51.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "PIR", 
+                "timestamp": "30 Jan 2014 15:16:00", 
+                "value": "1.0", 
+                "location": "SWAP", 
+                "units": [
+                  "Motion"
+                ], 
+                "type": "num", 
+                "id": "51.13.0", 
+                "unit": "Motion"
+              }
+            ], 
+            "id": 13, 
+            "name": "PIR Motion"
+          }
+        ], 
+        "pcode": "0000001500000003", 
+        "address": 51, 
+        "name": "PIR Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 14:57:54", 
+                "value": "3.264", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "22.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:12:54", 
+                "value": "24.2", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "22.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Light", 
+                "timestamp": "30 Jan 2014 15:12:55", 
+                "value": "3133.0", 
+                "location": "SWAP", 
+                "units": [
+                  "Light"
+                ], 
+                "type": "num", 
+                "id": "22.13.0", 
+                "unit": "Light"
+              }
+            ], 
+            "id": 13, 
+            "name": "Light Level"
+          }
+        ], 
+        "pcode": "0000001500000001", 
+        "address": 22, 
+        "name": "Temperature and Light Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:02:01", 
+                "value": "3.283", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "40.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:02:02", 
+                "value": "22.1", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "40.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Light", 
+                "timestamp": "30 Jan 2014 15:02:02", 
+                "value": "496.0", 
+                "location": "SWAP", 
+                "units": [
+                  "Light"
+                ], 
+                "type": "num", 
+                "id": "40.13.0", 
+                "unit": "Light"
+              }
+            ], 
+            "id": 13, 
+            "name": "Light Level"
+          }
+        ], 
+        "pcode": "0000001500000001", 
+        "address": 40, 
+        "name": "Temperature and Light Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:00:02", 
+                "value": "3.293", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "42.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:00:02", 
+                "value": "22.6", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "42.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 42, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:14:10", 
+                "value": "3.312", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "27.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:14:11", 
+                "value": "21.4", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "27.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 27, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:00:52", 
+                "value": "3.218", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "34.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:00:53", 
+                "value": "22.2", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "34.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 34, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:00:21", 
+                "value": "3.255", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "17.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:15:22", 
+                "value": "21.2", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "17.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "SPL", 
+                "timestamp": "30 Jan 2014 15:15:22", 
+                "value": "-223.0", 
+                "location": "SWAP", 
+                "units": [
+                  "SPL"
+                ], 
+                "type": "num", 
+                "id": "17.13.0", 
+                "unit": "SPL"
+              }
+            ], 
+            "id": 13, 
+            "name": "SPL Level"
+          }
+        ], 
+        "pcode": "0000001500000002", 
+        "address": 17, 
+        "name": "Temperature and SPL Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:00:24", 
+                "value": "3.264", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "29.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:15:24", 
+                "value": "22.9", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "29.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 29, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:01:08", 
+                "value": "3.342", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "45.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:01:08", 
+                "value": "24.0", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "45.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 45, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:01:58", 
+                "value": "3.293", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "32.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:01:58", 
+                "value": "23.6", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "32.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 32, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:04:14", 
+                "value": "3.146", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "30.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:04:15", 
+                "value": "18.5", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "30.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "SPL", 
+                "timestamp": "30 Jan 2014 14:48:29", 
+                "value": "-226.0", 
+                "location": "SWAP", 
+                "units": [
+                  "SPL"
+                ], 
+                "type": "num", 
+                "id": "30.13.0", 
+                "unit": "SPL"
+              }
+            ], 
+            "id": 13, 
+            "name": "SPL Level"
+          }
+        ], 
+        "pcode": "0000001500000002", 
+        "address": 30, 
+        "name": "Temperature and SPL Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:04:34", 
+                "value": "3.293", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "33.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:04:34", 
+                "value": "21.3", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "33.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 33, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:04:50", 
+                "value": "3.283", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "54.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:04:50", 
+                "value": "21.1", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "54.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 54, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:07:09", 
+                "value": "3.312", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "25.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:07:09", 
+                "value": "21.4", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "25.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 25, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 14:50:44", 
+                "value": "3.264", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "23.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:05:46", 
+                "value": "19.4", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "23.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "SPL", 
+                "timestamp": "30 Jan 2014 14:50:45", 
+                "value": "-226.0", 
+                "location": "SWAP", 
+                "units": [
+                  "SPL"
+                ], 
+                "type": "num", 
+                "id": "23.13.0", 
+                "unit": "SPL"
+              }
+            ], 
+            "id": 13, 
+            "name": "SPL Level"
+          }
+        ], 
+        "pcode": "0000001500000002", 
+        "address": 23, 
+        "name": "Temperature and SPL Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:06:32", 
+                "value": "3.362", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "255.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:06:33", 
+                "value": "25.1", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "255.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Light", 
+                "timestamp": "30 Jan 2014 15:06:33", 
+                "value": "791.0", 
+                "location": "SWAP", 
+                "units": [
+                  "Light"
+                ], 
+                "type": "num", 
+                "id": "255.13.0", 
+                "unit": "Light"
+              }
+            ], 
+            "id": 13, 
+            "name": "Light Level"
+          }
+        ], 
+        "pcode": "0000001500000001", 
+        "address": 255, 
+        "name": "Temperature and Light Sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:12:38", 
+                "value": "3.332", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "39.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:12:39", 
+                "value": "23.8", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "39.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 39, 
+        "name": "Temperature sensor", 
+        "manufacturer": "panStamp"
+      }, 
+      {
+        "registers": [
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Voltage", 
+                "timestamp": "30 Jan 2014 15:13:25", 
+                "value": "3.293", 
+                "location": "SWAP", 
+                "units": [
+                  "V"
+                ], 
+                "type": "num", 
+                "id": "43.11.0", 
+                "unit": "V"
+              }
+            ], 
+            "id": 11, 
+            "name": "Voltage supply"
+          }, 
+          {
+            "endpoints": [
+              {
+                "direction": "inp", 
+                "name": "Temperature", 
+                "timestamp": "30 Jan 2014 15:13:26", 
+                "value": "22.6", 
+                "location": "SWAP", 
+                "units": [
+                  "C", 
+                  "F", 
+                  "K"
+                ], 
+                "type": "num", 
+                "id": "43.12.0", 
+                "unit": "C"
+              }
+            ], 
+            "id": 12, 
+            "name": "Temperature"
+          }
+        ], 
+        "pcode": "0000000100000004", 
+        "address": 43, 
+        "name": "Temperature sensor", 
         "manufacturer": "panStamp"
       }
     ]

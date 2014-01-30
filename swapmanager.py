@@ -89,10 +89,22 @@ class SwapManager(SwapInterface):
         print("PUBLISHED: MID: "+str(mid))
 
 
+    def on_message(self, mosq, obj, msg):
+        """
+        Callback when a message has been recieved from the broker on a topic.
+        """
+        print("Message received on topic "+msg.topic+" with QoS "+str(msg.qos)+" and payload "+msg.payload)
+        if (msg.topic == "github/craigknott/CEIT_Sensors_PiModem"):
+            cmd = os.path.join(self.directory, "gitpull.sh")
+            self.shell_command(cmd)
+            self.shell_command("sudo svc -t /etc/service/lib")
+
+
     def on_connect(self, mosq, userdata, rc):
         """
         Callback when client connects to mqtt server.
         """
+        self.mqttc.subscribe("github/craigknott/CEIT_Sensors_PiModem")
         print("CONNECTED: RC: "+str(rc))
 
 
@@ -143,7 +155,8 @@ if __name__ == '__main__':
         exit(0)
     
     MQTT.pi_id = sys.argv[1]
-    settings = os.path.join(os.path.dirname(sys.argv[0]), "config", "settings.xml")
+    self.directory = os.path.dirname(sys.argv[0])
+    settings = os.path.join(self.directory, "config", "settings.xml")
     try:
         sm = SwapManager(settings)
     except:

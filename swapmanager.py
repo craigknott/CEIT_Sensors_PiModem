@@ -8,7 +8,6 @@ import json
 import random
 import mosquitto
 
-directory = os.path.dirname(sys.argv[0])
 
 class SwapManager(SwapInterface):
     """
@@ -97,7 +96,8 @@ class SwapManager(SwapInterface):
         """
         print("Message received on topic "+msg.topic+" with QoS "+str(msg.qos)+" and payload "+msg.payload)
         if (msg.topic == "github/craigknott/CEIT_Sensors_PiModem"):
-            cmd = os.path.join(directory, "gitpull.sh")
+            cmd = os.path.join(MQTT.directory, "gitpull.sh")
+            print cmd
             self.shell_command(cmd)
             self.shell_command("sudo svc -t /etc/service/lib")
 
@@ -158,7 +158,8 @@ if __name__ == '__main__':
         exit(0)
     
     MQTT.pi_id = sys.argv[1]
-    settings = os.path.join(directory, "config", "settings.xml")
+    MQTT.directory = os.path.dirname(sys.argv[0])
+    settings = os.path.join(MQTT.directory, "config", "settings.xml")
     try:
         sm = SwapManager(settings)
     except:

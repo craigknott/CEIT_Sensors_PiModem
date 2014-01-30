@@ -1,7 +1,7 @@
 CEIT_Sensors_PiModem
 ================
+By Craig Knott
 
-CEIT sensor network, modem codes:
 This repository contains the files required for the raspberry pi to communicate with panStamp sensors and publish the data to a MQTT server. 
 
 Install

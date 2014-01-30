@@ -132,6 +132,7 @@ class SwapManager(SwapInterface):
         self.mqttc = mosquitto.Mosquitto("LIB-PI_"+str(MQTT.pi_id)+str(random.randrange(10000)))
         self.mqttc.on_connect = self.on_connect
         self.mqttc.on_publish = self.on_publish
+        self.mqttc.on_message = self.on_message
         self.mqttc.connect(MQTT.server, 1883)
         
         try:

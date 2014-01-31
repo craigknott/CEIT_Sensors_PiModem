@@ -99,8 +99,7 @@ class SwapManager(SwapInterface):
             cmd = os.path.join(MQTT.directory, "gitpull.sh")
             print cmd
             self.shell_command(cmd)
-            self.shell_command("sudo svc -t /etc/service/lib")
-
+            
 
     def on_connect(self, mosq, userdata, rc):
         """

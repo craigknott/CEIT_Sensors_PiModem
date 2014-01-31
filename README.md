@@ -1,7 +1,7 @@
 CEIT_Sensors_PiModem
 ================
 By Craig Knott
-
+READMESTUFF
 This repository contains the files required for the raspberry pi to communicate with panStamp sensors and publish the data to a MQTT server. Following the instructions below will allow you to set up the pimodem, or you can download a clone of the already setup image and use that.
 
 Install

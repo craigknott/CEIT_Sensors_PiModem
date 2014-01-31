@@ -159,7 +159,8 @@ if __name__ == '__main__':
     
     MQTT.pi_id = sys.argv[1]
     MQTT.directory = os.path.dirname(os.path.realpath(__file__))
-    settings = os.path.join(os.path.dirname(sys.argv[0]), "config", "settings.xml")
+    print MQTT.directory
+    settings = os.path.join(MQTT.directory, "config", "settings.xml")
     try:
         sm = SwapManager(settings)
     except:

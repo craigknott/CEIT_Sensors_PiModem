@@ -97,7 +97,7 @@ class SwapManager(SwapInterface):
         print("Message received on topic "+msg.topic+" with QoS "+str(msg.qos)+" and payload "+msg.payload)
         if (msg.topic == "github/craigknott/CEIT_Sensors_PiModem"):
             cmd = os.path.join(MQTT.directory, "gitpull.sh")
-            print cmd
+            print "On message command fired: " + cmd
             self.shell_command(cmd)
             
 
@@ -158,7 +158,7 @@ if __name__ == '__main__':
     
     MQTT.pi_id = sys.argv[1]
     MQTT.directory = os.path.dirname(os.path.realpath(__file__))
-    print MQTT.directory
+    print "INIT DIRECTORY SET : " + MQTT.directory
     settings = os.path.join(MQTT.directory, "config", "settings.xml")
     try:
         sm = SwapManager(settings)

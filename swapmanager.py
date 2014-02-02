@@ -66,7 +66,7 @@ class SwapManager(SwapInterface):
                         print "PUBLISH SUCCESS: " + str(pub_data)
                     else:
                         print "PUBLISH FAILED: " + str(pub_data)
-                        #sys.exit(2) 
+                        self.shell_command("sudo ifup wlan0")
             except:
                 e = sys.exc_info()[0]
                 print ("<publishData> Error: %s" % e )
@@ -145,8 +145,7 @@ class SwapManager(SwapInterface):
         except:
             e = sys.exc_info()[0]
             print ("<__init__> Error: %s" % e )
-            self.stop()
-            sys.exit(1)
+            self.shell_command("sudo svc -t /etc/service/lib/")
 
 if __name__ == '__main__':
     """
@@ -165,4 +164,4 @@ if __name__ == '__main__':
     except:
         e = sys.exc_info()[0]
         print ("<__main__> Error: %s" % e )
-        sys.exit(1)
+        self.shell_command("sudo svc -t /etc/service/lib/")

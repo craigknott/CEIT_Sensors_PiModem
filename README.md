@@ -7,11 +7,11 @@ This repository contains the files required for the raspberry pi to communicate 
 Install
 =======
 Install dependencies.
- 1. sudo apt-get install python-pip
- 2. sudo pip install redis pyserial mosquitto
- 3. git clone https://github.com/craigknott/CEIT_Sensors_PiModem
- 4. cd CEIT_Sensors_PiModem/pyswap/
- 5. sudo python setup.py install
+``` 1. sudo apt-get install python-pip
+``` 2. sudo pip install pyserial mosquitto
+``` 3. git clone https://github.com/craigknott/CEIT_Sensors_PiModem
+``` 4. cd CEIT_Sensors_PiModem/pyswap/
+``` 5. sudo python setup.py install
 
 Setup cronjob to restart wifi on disconnect
  1. sudo crontab -e

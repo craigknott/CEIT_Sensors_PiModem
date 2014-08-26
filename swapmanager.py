@@ -7,7 +7,7 @@ import os
 import json
 import random
 import mosquitto
-
+import time
 
 class SwapManager(SwapInterface):
     """
@@ -66,12 +66,19 @@ class SwapManager(SwapInterface):
                         print "PUBLISH SUCCESS: " + str(pub_data)
                     else:
                         print "PUBLISH FAILED: " + str(pub_data)
-                        self.shell_command("sudo ifup wlan0")
+                        self.reconnect_loop(MQTT.topic_temp, str(pub_data))
             except:
                 e = sys.exc_info()[0]
                 print ("<publishData> Error: %s" % e )
 
-	          
+
+    def reconnect_loop(self, topic, data):
+    	result = -1
+    	while result!=0:
+    	    self.shell_command("sudo ifup wlan0")
+    	    time.sleep(2)
+            self.mqttc.connect(MQTT.server, 1883)
+            (result, mid) = self.mqttc.publish(topic, data, retain = True)
 
     def shell_command(self, command):
         """

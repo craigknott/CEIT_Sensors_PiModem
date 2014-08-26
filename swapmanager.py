@@ -56,6 +56,7 @@ class SwapManager(SwapInterface):
         if len(status) > 0:
             # Publish data onto the server LIB/level4/climate_raw
             pub_data = json.dumps(status)[1:-1]
+            pub_data = pub_data[:-1] + ", 'pi_id' : " + str(MQTT.pi_id) + pub_data[-1]
             data = status[0] 
             
             try:

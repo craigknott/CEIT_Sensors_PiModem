@@ -71,6 +71,8 @@ class SwapManager(SwapInterface):
             except:
                 e = sys.exc_info()[0]
                 print ("<publishData> Error: %s" % e )
+                self.shell_command("sudo svc -t /etc/service/lib/")
+                exit(-2)
 
 
     def reconnect_loop(self, topic, data):
@@ -154,6 +156,7 @@ class SwapManager(SwapInterface):
             e = sys.exc_info()[0]
             print ("<__init__> Error: %s" % e )
             self.shell_command("sudo svc -t /etc/service/lib/")
+            exit(-3)
 
 if __name__ == '__main__':
     """
@@ -173,3 +176,4 @@ if __name__ == '__main__':
         e = sys.exc_info()[0]
         print ("<__main__> Error: %s" % e )
         self.shell_command("sudo svc -t /etc/service/lib/")
+        exit(-1)

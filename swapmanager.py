@@ -85,7 +85,7 @@ class SwapManager(SwapInterface):
                 (result, mid) = self.mqttc.publish(topic, data, retain = True)
             except:
                 e = sys.exc_info()[0]
-                print("<mqtt.connect> Error: %s" % e)
+                print("<reconnect_loop> Error: %s" % e)
 
     def shell_command(self, command):
         """
@@ -155,7 +155,7 @@ class SwapManager(SwapInterface):
                 flag = self.mqttc.connect(MQTT.server, 1883)
             except:
                 e = sys.exc_info()[0]
-                print("<mqtt.connect> Error: %s" % e)
+                print("<__init__><mqtt.connect> Error: %s" % e)
                 self.shell_command("sudo /home/pi/CEIT_Sensors_PiModem/wifi_persist.sh")
         
         try:

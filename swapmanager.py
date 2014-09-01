@@ -79,7 +79,7 @@ class SwapManager(SwapInterface):
     	result = -1
     	while result!=0:
     	    self.shell_command("sudo /home/pi/CEIT_Sensors_PiModem/wifi_persist.sh")
-    	    time.sleep(15)
+    	    time.sleep(8)
     	    try:
                 self.mqttc.connect(MQTT.server, 1883)
                 (result, mid) = self.mqttc.publish(topic, data, retain = True)

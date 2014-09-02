@@ -149,11 +149,13 @@ class SwapManager(SwapInterface):
         self.mqttc.on_publish = self.on_publish
         self.mqttc.on_message = self.on_message
         
-        flag = MOSQ_ERR_INVAL
-        while(flag != MOSQ_ERR_SUCCESS):
+        flag = 1
+        while(flag == 1):
             try:
-                flag = self.mqttc.connect(MQTT.server, 1883)
+                self.mqttc.connect(MQTT.server, 1883)
+                flag = 0
             except:
+                flag = 1
                 e = sys.exc_info()[0]
                 print("<__init__><mqtt.connect> Error: %s" % e)
                 self.shell_command("sudo /home/pi/CEIT_Sensors_PiModem/wifi_persist.sh")
@@ -187,5 +189,4 @@ if __name__ == '__main__':
     except:
         e = sys.exc_info()[0]
         print ("<__main__> Error: %s" % e )
-        self.shell_command("sudo svc -t /etc/service/lib/")
         exit(-1)
